@@ -1,6 +1,18 @@
+import { useCart } from "../store/CartContext";
 import "./MealItem.css";
 
-function MealItem({ name, description, price, image }) {
+function MealItem({ id, name, description, price, image }) {
+  const { addItem } = useCart();
+
+  function handleAddToCart() {
+    addItem({
+      id,
+      name,
+      price,
+      image,
+    });
+  }
+
   return (
     <article className="meal-item">
       <img
@@ -19,7 +31,11 @@ function MealItem({ name, description, price, image }) {
         </span>
       </div>
 
-      <button type="button" className="add-button">
+      <button
+        type="button"
+        className="add-button"
+        onClick={handleAddToCart}
+      >
         افزودن به سبد خرید +
       </button>
     </article>
