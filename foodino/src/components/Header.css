@@ -2,54 +2,67 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #c66d6d;
-  border-bottom: 1px solid #962626;
+  gap: 20px;
+  padding: 20px 50px;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid #45454a;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo {
   margin: 0;
-  color: #8e0000;
-  font-size: 28px;
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .nav {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav a {
-  color: #333;
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s;
 }
 
 .nav a:hover {
-  color: #962626;
+  color: #e8b6c5;
 }
 
 .cart-button {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  background-color: #c66d6d;
-  color: white;
+  background-color: #303035;
+  color: #ffffff;
+  border: 1px solid #b77a8b;
+  border-radius: 10px;
+  padding: 12px 22px;
   font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .cart-button:hover {
-  background-color: #c66d6d;
+  background-color: #6b3043;
+  border-color: #d3a2b0;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
-    gap: 16px;
-    padding: 20px;
+    gap: 18px;
+    padding: 20px 16px;
   }
 
   .nav {
-    gap: 16px;
+    gap: 22px;
+  }
+
+  .logo {
+    font-size: 27px;
   }
 }

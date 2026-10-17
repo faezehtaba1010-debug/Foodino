@@ -3,15 +3,15 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <h1 className="logo">Foodino</h1>
+      <h1 className="logo">فودینو</h1>
 
       <nav className="nav">
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
+        <a href="#home">خانه</a>
+        <a href="#menu">چی بزنیم؟</a>
       </nav>
 
       <button type="button" className="cart-button">
-        Cart (0)
+        سبد خرید (۰)
       </button>
     </header>
   );
