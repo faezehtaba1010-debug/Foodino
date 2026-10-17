@@ -1,22 +1,22 @@
 import Header from "./components/Header";
+import Meals from "./components/Meals";
 
 function App() {
   return (
-    <>
+    <div dir="rtl" lang="fa">
       <Header />
 
       <main id="home">
-        <section>
-        <h2>.به فودینو خوش آمدید</h2>
-        <p>.سفارش غذاهای خوشمزه را به راحتی انجام دهید</p>
+        <section className="welcome">
+          <h2>به فودینو خوش آمدید!</h2>
+          <p>
+            غذات رو راحت سفارش بده.
+          </p>
         </section>
 
-        <section id="menu">
-          <h2>چی بزنیم؟</h2>
-          <p>!یک لقمه تا خوشبختی</p>
-        </section>
+        <Meals />
       </main>
-    </>
+    </div>
   );
 }
 
