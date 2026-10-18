@@ -1,3 +1,103 @@
 {
-  "orders": []
+  "meals": [
+    {
+      "id": "m1",
+      "name": "پیتزا مخصوص",
+      "price": 250000,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591"
+    },
+    {
+      "id": "m2",
+      "name": "برگر",
+      "price": 180000,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+    },
+    {
+      "id": "m3",
+      "name": "پاستا",
+      "price": 210000,
+      "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601"
+    }
+  ],
+  "orders": [
+    {
+      "customer": {
+        "name": "زمانی",
+        "phone": "09123456789",
+        "address": "مطهری"
+      },
+      "items": [
+        {
+          "id": 3,
+          "name": "پنه آلفردو",
+          "price": 789000,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0lIp0AttshJdq2R2weg4XFwJDUeKEB82YhTf4ATMKO0ybzxAktgdQia0&s=10",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "همبرگر ویژه",
+          "price": 644000,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXOAbWP3IkZrbNxJVPNsig3QyrZH4JC2sFMt0obb_LUUVVkyxqO1nE_fx&s=10",
+          "quantity": 1
+        },
+        {
+          "id": 1,
+          "name": "پیتزا مخصوص",
+          "price": 1200000,
+          "image": "https://img.magnific.com/premium-psd/pizza-with-olives-tomatoes-olives-it_1268410-858.jpg?semt=ais_hybrid&w=740&q=80",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 2633000,
+      "createdAt": "2026-10-18T11:49:24.304Z",
+      "id": "CWnGAOcZGPs"
+    },
+    {
+      "customer": {
+        "name": "زباتی",
+        "phone": "09123456789",
+        "address": "تعران"
+      },
+      "items": [
+        {
+          "id": 3,
+          "name": "پنه آلفردو",
+          "price": 789000,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0lIp0AttshJdq2R2weg4XFwJDUeKEB82YhTf4ATMKO0ybzxAktgdQia0&s=10",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "همبرگر ویژه",
+          "price": 644000,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXOAbWP3IkZrbNxJVPNsig3QyrZH4JC2sFMt0obb_LUUVVkyxqO1nE_fx&s=10",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 1433000,
+      "createdAt": "2026-10-18T11:57:56.585Z",
+      "id": "3AUMOlJ8kWM"
+    },
+    {
+      "customer": {
+        "name": "زمانی",
+        "phone": "09123456789",
+        "address": "کریمخان"
+      },
+      "items": [
+        {
+          "id": 3,
+          "name": "پنه آلفردو",
+          "price": 789000,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0lIp0AttshJdq2R2weg4XFwJDUeKEB82YhTf4ATMKO0ybzxAktgdQia0&s=10",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 789000,
+      "createdAt": "2026-10-18T11:59:20.425Z",
+      "id": "9bQ5TD_574o"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1,13 +1,28 @@
-
 import { useState } from "react";
 import { useCart } from "../store/CartContext";
 import Checkout from "./Checkout";
 import "./Cart.css";
 
 function Cart({ onClose }) {
-  const { items, addItem, removeItem, totalPrice } = useCart();
+  const {
+    items,
+    addItem,
+    removeItem,
+    totalPrice,
+    clearCart,
+  } = useCart();
 
   const [showCheckout, setShowCheckout] = useState(false);
+
+  function handleOrderSuccess() {
+    // بعد از ثبت موفق سفارش، سبد خرید خالی شود
+    if (typeof clearCart === "function") {
+      clearCart();
+    }
+
+    setShowCheckout(false);
+    onClose?.();
+  }
 
   return (
     <div className="cart-overlay" onClick={onClose}>
@@ -20,8 +35,9 @@ function Cart({ onClose }) {
       >
         {showCheckout ? (
           <Checkout
+            cartItems={items}
+            onSuccess={handleOrderSuccess}
             onCancel={() => setShowCheckout(false)}
-            onClose={onClose}
           />
         ) : (
           <>
@@ -50,7 +66,7 @@ function Cart({ onClose }) {
                       <h3>{item.name}</h3>
 
                       <p>
-                        {item.price.toLocaleString("fa-IR")} تومان
+                        {Number(item.price).toLocaleString("fa-IR")} تومان
                       </p>
                     </div>
 
@@ -64,7 +80,7 @@ function Cart({ onClose }) {
                       </button>
 
                       <span>
-                        {item.quantity.toLocaleString("fa-IR")}
+                        {Number(item.quantity).toLocaleString("fa-IR")}
                       </span>
 
                       <button
@@ -82,7 +98,7 @@ function Cart({ onClose }) {
 
             <div className="cart-footer">
               <strong>
-                مبلغ کل: {totalPrice.toLocaleString("fa-IR")} تومان
+                مبلغ کل: {Number(totalPrice).toLocaleString("fa-IR")} تومان
               </strong>
 
               {items.length > 0 && (
