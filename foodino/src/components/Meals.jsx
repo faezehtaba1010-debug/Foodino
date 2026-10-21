@@ -20,8 +20,8 @@ const meals = [
   },
   {
     id: 3,
-    name: "پاستا آلفردو",
-    description: "پاستای ایتالیایی با سس خامه‌ای، مرغ و قارچ",
+    name: "پنه آلفردو",
+    description: "پاستای پنه با سس آلفردو، فیله مرغ، قارچ و پنیر پارمزان",
     price: 789000,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0lIp0AttshJdq2R2weg4XFwJDUeKEB82YhTf4ATMKO0ybzxAktgdQia0&s=10",
@@ -34,15 +34,16 @@ function Meals() {
       <h2>چی بزنیم؟</h2>
 
       <div className="meals-list">
-        {meals.map((meal) => (
-          <MealItem
-            key={meal.id}
-            name={meal.name}
-            description={meal.description}
-            price={meal.price}
-            image={meal.image}
-          />
-        ))}
+       {meals.map((meal) => (
+  <MealItem
+    key={meal.id}
+    id={meal.id}
+    name={meal.name}
+    description={meal.description}
+    price={meal.price}
+    image={meal.image}
+  />
+))}
       </div>
     </section>
   );

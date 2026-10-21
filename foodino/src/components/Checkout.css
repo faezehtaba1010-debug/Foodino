@@ -1,0 +1,109 @@
+.checkout {
+  direction: rtl;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  color: #333;
+  text-align: right;
+}
+
+.checkout h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #6d1830;
+}
+
+.checkout p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.checkout form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.checkout form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkout label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.checkout input,
+.checkout textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 15px;
+  background: #fff;
+  color: #333;
+  direction: rtl;
+  text-align: right;
+}
+
+.checkout textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.checkout input:focus,
+.checkout textarea:focus {
+  outline: none;
+  border-color: #800020;
+  box-shadow: 0 0 0 2px #80002020;
+}
+
+.checkout form > div:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkout button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #800020;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout button[type="button"] {
+  background: #eee;
+  color: #333;
+}
+
+.checkout button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .checkout {
+    padding: 4px;
+  }
+
+  .checkout h2 {
+    font-size: 22px;
+  }
+
+  .checkout button {
+    flex: 1;
+  }
+}
