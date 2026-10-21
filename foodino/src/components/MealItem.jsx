@@ -31,13 +31,13 @@ function MealItem({ id, name, description, price, image }) {
         </span>
       </div>
 
-      <button
-        type="button"
-        className="add-button"
-        onClick={handleAddToCart}
-      >
-        افزودن به سبد خرید +
-      </button>
+     <Button
+  type="button"
+  className="add-button"
+  onClick={handleAddToCart}
+>
+  افزودن به سبد خرید +
+     </Button>
     </article>
   );
 }
