@@ -1,5 +1,6 @@
 import { useCart } from "../store/CartContext";
 import "./MealItem.css";
+import Button from "./Button";
 
 function MealItem({ id, name, description, price, image }) {
   const { addItem } = useCart();
@@ -31,13 +32,13 @@ function MealItem({ id, name, description, price, image }) {
         </span>
       </div>
 
-      <button
-        type="button"
-        className="add-button"
-        onClick={handleAddToCart}
-      >
-        افزودن به سبد خرید +
-      </button>
+     <Button
+  type="button"
+  className="add-button"
+  onClick={handleAddToCart}
+>
+  افزودن به سبد خرید +
+     </Button>
     </article>
   );
 }
