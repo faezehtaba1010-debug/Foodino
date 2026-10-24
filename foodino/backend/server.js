@@ -115,3 +115,11 @@ app.post("/orders", (req, res) => {
 // تست سرور
 app.get("/", (req, res) => {
   res.send("Foodino API is running!");
+});
+
+// اجرای سرور
+app.listen(PORT, () => {
+  console.log(
+    `Foodino backend running at http://localhost:${PORT}`
+  );
+});
