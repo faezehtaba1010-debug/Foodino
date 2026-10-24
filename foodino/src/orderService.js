@@ -1,4 +1,4 @@
-const ORDERS_URL ="http://localhost:3001/meals";
+const ORDERS_URL = "http://localhost:3001/orders";
 
 export async function saveOrder(customer, cartItems) {
   if (!cartItems || cartItems.length === 0) {
